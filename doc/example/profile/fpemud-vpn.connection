@@ -1,0 +1,9 @@
+<connection>
+	<name>FpemudVpn</main>
+	<depends>main</depends>
+	<netobj-stack>
+		<netobj id="1" type="wrtd-openvpn">
+			<config>/etc/openvpn/wrtd-vpn</config>
+		</netobj>
+	</netobj-stack>
+</connection>

@@ -1,0 +1,14 @@
+<connection>
+	<name>Main</main>
+	<netobj-stack>
+		<netobj id="1" type="dhcp">
+			<ipv4>
+				<ignore-auto-default-routes/>
+				<route>10.153.0.0/16,10.153.48.1</route>
+			</ipv4>
+		</netobj>
+		<netobj id="2" parent="1" type="802-3-ethernet">
+			<select mac-address="77:46:A0:AC:BD:4F"/>
+		</netobj>
+	</netobj-stack>
+</connection>

@@ -1,0 +1,26 @@
+What's the difference:
+1. all the wifi connection is pre-configured.
+2. normal network:
+     dhcp -> dns -> dns-sd -> failed -> mdns
+3. ad-hoc network
+     auto-generate-ip -> mdns -> mdns-sd
+     (show special information)
+4. provide it's own dns resolver, so that we can do dns 
+5. tethering
+6. wake-on-line and wake-on-wlan
+7. use plugin to implement advanced function.
+   1. vpn
+   2. cgfw
+   3. web cache
+   4. ids
+   5. auto penetration
+   6. try and record public APs
+8. compatible mode
+
+
+
+Roadmap:
+1. eth and wifi
+2. applet
+3. wake-on-line
+4. sgw-api

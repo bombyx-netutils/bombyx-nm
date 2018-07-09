@@ -1,0 +1,15 @@
+上层是pattern
+只能有一个活跃pattern
+pattern中有连接, 连接中有netobj，每个netobj代表对一个或一种基础设施的使用,netobj有多个，叠起来，代表上下层关系，例如在eth连接基础上建vpn
+对netobj和连接进行自动配对，配上就是可使用的连接，配不上就是不可使用的连接
+pattern只能人工active
+有服务概念，一个pattern建立后，可以启动一个服务
+pattern有switch概念，可以有bool和radio两种switch
+pattern有健康度概念，无线信号强度作为健康度的一部分
+
+
+
+统一管理：
+1. ip_forward这个sysctl
+2. iptables所有rule
+3. 缺省路由

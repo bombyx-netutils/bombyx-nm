@@ -1,0 +1,14 @@
+[Unit]
+Description=Bombyx Daemon
+Documentation=man:bombyx-daemon(8)
+Wants=network.target
+After=network-pre.target dbus.service
+Before=network.target
+
+[Service]
+Type=dbus
+BusName=org.fpemud.Bombyx
+ExecStart=/usr/sbin/bombyx-daemon
+
+[Install]
+WantedBy=multi-user.target

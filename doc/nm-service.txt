@@ -1,0 +1,170 @@
+Network manager manages network connections. 
+network manager runs binary in /usr/libexec/nm-service
+binary should detect if the parent process is down, terminate itself.
+use stdout to send json strings;/;;>.;;l..c,;7' komi tnh g efxzjhfuytj4rfnkjgnh.
+we trust network traffic facilities.xbh /
+
+
+################################################################################
+# facility2manager: entity-host-new
+################################################################################
+# {
+#     "operation": "new",
+#     "id": "ID",
+#     "type": "host",
+#     "data": {
+#         "hostname": "hostname",
+#         "address": "address",
+#     },
+# }
+#
+################################################################################
+# facility2manager: entity-nameserver-new
+################################################################################
+# {
+#     "operation": "new",
+#     "id": "ID",
+#     "type": "nameserver",
+#     "data": {
+#         "target": ["hostname" or "hostname:port"],
+#         "domain-list": ["domain"],
+#     },
+# }
+#
+################################################################################
+# facility2manager: entity-gateway-new
+################################################################################
+# {
+#     "operation": "new",
+#     "id": "ID",
+#     "type": "gateway",
+#     "data": {
+#         "target": ("next-hop","interface"),                               # one of them can be null
+#         "network-list": ["18.0.0.0/255.0.0.0","19.0.0.0/255.0.0.0"],
+#     },
+# }
+#
+################################################################################
+# facility2manager: entity-http-proxy-new
+################################################################################
+# {
+#     "operation": "new",
+#     "id": "ID",
+#     "type": "http-proxy",
+#     "data": {
+#         "target": {"http":(hostname, port),"https":(hostname,port),"ftp":(hostname,port)},
+#         "domain-list": ["domain"],
+#     },
+# }
+#
+################################################################################
+# facility2manager: entity-default-nameserver-new
+################################################################################
+# {
+#     "operation": "new",
+#     "id": "ID",
+#     "type": "default-nameserver",
+#     "data": {
+#         "target": ["hostname" or "hostname:port"],
+#     },
+# }
+#
+################################################################################
+# facility2manager: entity-default-gateway-new
+################################################################################
+# {
+#     "operation": "new",
+#     "id": "ID",
+#     "type": "default-gateway",
+#     "data": {
+#         "target": ("next-hop","interface"),                               # one of them can be null
+#     },
+# }
+#
+################################################################################
+# facility2manager: entity-default-http-proxy-new
+################################################################################
+# {
+#     "operation": "new",
+#     "id": "ID",
+#     "type": "default-http-proxy",
+#     "data": {
+#         "target": {"http":(hostname, port),"https":(hostname,port),"ftp":(hostname,port)},
+#     },
+# }
+#
+################################################################################
+# facility2manager: entity-acl-new
+################################################################################
+# {
+#     "operation": "new",
+#     "id": "ID",
+#     "type": "acl",
+#     "data": {
+#         "rule-list": ["rule"],
+#     },
+# }
+#
+################################################################################
+# facility2manager: entity-host-update
+################################################################################
+# {
+#     "operation": "update",
+#     "id": "ID",
+#     "data": {
+#         "address": "address",
+#     },
+# }
+#
+################################################################################
+# facility2manager: entity-nameserver-update
+################################################################################
+# {
+#     "operation": "update",
+#     "id": "ID",
+#     "data": {
+#         "domain-list": ["domain"],
+#     },
+# }
+#
+################################################################################
+# facility2manager: entity-gateway-update
+################################################################################
+# {
+#     "operation": "update",
+#     "id": "ID",
+#     "data": {
+#         "network-list": ["18.0.0.0/255.0.0.0","19.0.0.0/255.0.0.0"],
+#     },
+# }
+#
+################################################################################
+# facility2manager: entity-http-proxy-update
+################################################################################
+# {
+#     "operation": "update",
+#     "id": "ID",
+#     "data": {
+#         "domain-list": ["domain"],
+#     },
+# }
+#
+################################################################################
+# facility2manager: entity-acl-update
+################################################################################
+# {
+#     "operation": "update",
+#     "id": "ID",
+#     "data": {
+#         "rule-list": ["rule"],
+#     },
+# }
+#
+################################################################################
+# facility2manager: entity-delete
+################################################################################
+# {
+#     "operation": "delete",
+#     "id": "ID",
+# }
+#

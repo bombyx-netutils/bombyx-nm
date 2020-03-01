@@ -8,9 +8,12 @@ import logging
 from gi.repository import GLib
 from dbus.mainloop.glib import DBusGMainLoop
 from byx_util import ByxUtil
+from byx_util import CallingPointManager
+from byx_util import PluginManager
 from byx_dbus import DbusMainObject
 from byx_dbus import DbusIpForwardObject
 from byx_common import ByxConfig
+from byx_traffic_manager import ByxTrafficManager
 from byx_connection_manager import ByxConnectionManager
 
 
@@ -45,12 +48,17 @@ class ByxDaemon:
             DBusGMainLoop(set_as_default=True)
             self.mainloop = GLib.MainLoop()
 
+            # start supporting managers
+            self.param.callingPointManager = CallingPointManager()
+            self.param.pluginManager = PluginManager(self.param.libPluginDir)
+
             # start DBUS API server
             self.param.dbusMainObject = DbusMainObject(self.param)
             self.param.dbusIpForwardObject = DbusIpForwardObject(self.param)
             logging.info("DBUS-API server started.")
 
             # business initialize
+            self.param.trafficManager = ByxTrafficManager(self.param)
             self.param.connectionManager = ByxConnectionManager(self.param)
             self.param.daemon = self
 

@@ -26,8 +26,12 @@ class ByxParam:
         self.logLevel = None
         self.abortOnError = False
 
+        self.callingPointManager = None
+        self.pluginManager = None
+
         self.dbusMainObject = None
         self.dbusIpForwardObject = None
         self.config = None
+        self.trafficManager = None
         self.connectionManager = None
         self.daemon = None

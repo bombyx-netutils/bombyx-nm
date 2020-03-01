@@ -27,9 +27,9 @@ class ByxConfig:
 
         self.enable = True
         self.enableNetworkType = {
-            "wired": True,
-            "wireless": True,
-            "mobile": True,
+            ByxNetworkType.WIRED: True,
+            ByxNetworkType.WIRELESS: True,
+            ByxNetworkType.MOBILE: True,
         }
         self.priority = 1
         self.autoActivate = True

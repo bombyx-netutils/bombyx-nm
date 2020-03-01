@@ -1,8 +1,8 @@
 Network manager manages network connections. 
 network manager runs binary in /usr/libexec/nm-service
 binary should detect if the parent process is down, terminate itself.
-use stdout to send json strings;/;;>.;;l..c,;7' komi tnh g efxzjhfuytj4rfnkjgnh.
-we trust network traffic facilities.xbh /
+use stdout to send json strings
+we trust network traffic facilities
 
 
 ################################################################################

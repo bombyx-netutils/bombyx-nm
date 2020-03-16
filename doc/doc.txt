@@ -13,3 +13,40 @@ pattern有健康度概念，无线信号强度作为健康度的一部分
 1. ip_forward这个sysctl
 2. iptables所有rule
 3. 缺省路由
+
+
+
+
+
+
+
+1. lan-bridge is created by ntfac through dbus
+2. wan and vpn is 
+
+
+
+
+
+router cascading:
+1. inter-router-vpn is used to connect routers
+2. inter-router-vpn-server is parent, inter-router-vpn-client is child
+3. no loop is allowed
+
+dynamic ip-network allocation:
+1. using a link state protocol to distribute networks on each router
+2. change ip if find my child network conflicts with others, before advertising my networks
+3. advertise ip if my ip is unchangable
+4. 
+
+dns:
+1. only for domain -> ip resolution
+2. using a link state protocol to distribute name server configuration on each router
+3. priority: local dns -> parent router dns -> ... -> parent router dns
+
+route:
+1. using a link state protocol to distribute route on each router
+2. priority: local route -> parent router dns -> ... -> parent router dns
+
+proxy:
+1. using a link state protocol to distribute proxy on each router
+3. priority: local proxy -> parent router dns -> ... -> parent router dns

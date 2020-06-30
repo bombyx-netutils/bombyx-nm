@@ -16,12 +16,9 @@ pattern有健康度概念，无线信号强度作为健康度的一部分
 
 
 
-
-
-
-
-1. lan-bridge is created by ntfac through dbus
-2. wan and vpn is 
+use wrtd as networkmanager, lan-bridge functionality is embedded
+wan connection are plugins
+vpn should be seen as overlay-network, vpn-server or vpn-client should be standalone process and program, and be outer ntfac?
 
 
 

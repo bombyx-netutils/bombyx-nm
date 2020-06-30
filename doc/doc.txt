@@ -20,7 +20,7 @@ use wrtd as networkmanager, lan-bridge functionality is embedded
 wan connection are plugins
 
 vpn should be seen as overlay-network, vpn-server or vpn-client should be standalone process and program, and be outer ntfac?
-l2vpn is not supported (wireguard is level 3 only)
+l2vpn is not supported (wireguard is level 3 only, and the requirement of NATed access for LANs)
 
 
 
